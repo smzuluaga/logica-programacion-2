@@ -21,6 +21,15 @@ function convertir() {
     let inputFromValue = inputFrom.value;
     let dataFromValue = parseFloat(dataFrom.value);
 
+    if (!Number(dataFromValue)){
+        alert ("El dato que ingreso no es un número. \nIngrese un valor válido")
+        document.getElementById("dataFrom").value = "";
+        document.getElementById("showTemperatura1").innerHTML = "";
+        document.getElementById("showTemperatura2").innerHTML = "";
+
+        return 
+    }
+
     switch(inputFromValue){
         case "C":
             convertirCelcius(dataFromValue);
